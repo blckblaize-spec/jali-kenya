@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jali Kenya — family welfare, community care, and mutual support.">
+<title>Jali Kenya | Together in Care</title>
+<style>
+:root{--green:#155b46;--deep:#103e33;--gold:#e6b85c;--cream:#f7f6f0;--ink:#20312b;--muted:#68756f;--white:#fff;--line:#e4e9e4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.02em;color:var(--deep);font-size:1.1rem}
+.logo{width:42px;height:42px;border-radius:14px;background:var(--green);color:white;display:grid;place-items:center;font-weight:900;font-size:1.1rem;box-shadow:0 5px 16px #155b4625}.logo span{color:var(--gold)}
+nav{display:flex;gap:24px;align-items:center;font-size:.94rem;color:#42564d}nav a:hover{color:var(--green)}
+.btn{border:0;border-radius:999px;padding:12px 19px;background:var(--green);color:white;font-weight:750;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px;font-size:.95rem}.btn:hover{background:var(--deep)}.btn.gold{background:var(--gold);color:#20312b}.btn.outline{background:transparent;border:1px solid #cbd7cf;color:var(--deep)}
+.hero{background:linear-gradient(115deg,#103e33 0%,#155b46 64%,#236e55 100%);color:#fff;padding:78px 0 74px;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff20;border-radius:50%;right:-100px;top:-100px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff06}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#f5d993;font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.75rem}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.04;letter-spacing:-.045em;margin:18px 0 20px;max-width:680px}h1 em{font-style:normal;color:#f0ca78}.hero p{font-size:1.1rem;color:#e2eee7;max-width:560px;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero .outline{color:white;border-color:#ffffff60}
+.hero-card{background:#fff;color:var(--ink);border-radius:24px;padding:26px;box-shadow:0 25px 70px #06251b55;max-width:390px;justify-self:end;width:100%;position:relative}.hero-card h3{margin:0 0 6px;font-size:1.2rem}.hero-card>p{font-size:.9rem;color:var(--muted);margin:0 0 20px}.stat{display:flex;gap:14px;padding:15px 0;border-top:1px solid var(--line);align-items:center}.stat-icon{width:43px;height:43px;background:#eaf4ed;border-radius:14px;display:grid;place-items:center;font-size:1.25rem}.stat strong{display:block}.stat small{color:var(--muted)}
+section{padding:72px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 36px}.kicker{color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem}.section-head h2{font-size:clamp(1.9rem,3vw,2.8rem);letter-spacing:-.035em;line-height:1.15;margin:10px 0 12px}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:20px;padding:25px;background:#fff}.card-icon{width:48px;height:48px;border-radius:15px;background:#edf5ef;display:grid;place-items:center;font-size:1.35rem;margin-bottom:17px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0;font-size:.95rem}
+.soft{background:var(--cream)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}.num{font-size:.8rem;color:var(--green);font-weight:900;letter-spacing:.12em}.step h3{margin:10px 0 6px}.step p{color:var(--muted);margin:0}
+.cta{background:#eaf3ec;border-radius:26px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{margin:0 0 8px;font-size:clamp(1.7rem,3vw,2.4rem)}.cta p{margin:0;color:var(--muted)}
+form{display:grid;gap:15px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:7px}.field label{font-size:.9rem;font-weight:750}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #cfd9d1;border-radius:11px;font:inherit;background:#fff;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #b7d6c0;border-color:var(--green)}.field textarea{min-height:90px;resize:vertical}.form-note{font-size:.85rem;color:var(--muted)}
+.forms-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:start}.form-intro{background:var(--deep);color:white;border-radius:22px;padding:28px}.form-intro h3{font-size:1.5rem;margin:0 0 10px}.form-intro p{color:#d6e5dc}.form-intro li{margin:9px 0;color:#edf5ef}.form-panel{border:1px solid var(--line);border-radius:22px;padding:27px}.tabs{display:flex;gap:8px;margin-bottom:22px;background:#f0f3ef;padding:5px;border-radius:999px}.tab{flex:1;border:0;background:transparent;border-radius:999px;padding:11px;font:inherit;font-weight:750;cursor:pointer;color:#526259}.tab.active{background:#fff;color:var(--green);box-shadow:0 2px 8px #183b2510}
+.notice{border-radius:12px;background:#fff7e5;color:#70541a;padding:12px 14px;font-size:.86rem;border:1px solid #f1dfad}
+footer{background:#102f27;color:#dbe8df;padding:36px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:850;font-size:1.1rem}.footer-small{font-size:.85rem;color:#b9cfc2}
+.mobile-menu{display:none}
+@media(max-width:800px){nav{display:none}.hero{padding:55px 0}.hero-grid,.forms-layout{grid-template-columns:1fr}.hero-card{justify-self:start;max-width:none}.cards,.steps{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}section{padding:54px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">J<span>.</span></span><span>JALI KENYA</span></a>
+<nav><a href="#about">About</a><a href="#support">Our support</a><a href="#how">How it works</a><a href="#register">Join us</a></nav>
+<a class="btn" href="#register">Become a member <span>→</span></a>
+</div></header>
+<main id="home">
+<section class="hero"><div class="wrap hero-grid">
+<div><div class="eyebrow"><span class="dot"></span> Community care • Family support</div>
+<h1>When life gets hard, <em>we stand together.</em></h1>
+<p>Jali Kenya is a proposed community-welfare initiative built around compassion, preparedness, and supporting families through life’s difficult moments.</p>
+<div class="hero-actions"><a class="btn gold" href="#register">Explore membership →</a><a class="btn outline" href="#about">Learn about Jali</a></div>
+</div>
+<div class="hero-card"><h3>Care starts with community</h3><p>A clear, people-first approach to mutual support.</p>
+<div class="stat"><div class="stat-icon">♡</div><div><strong>Family-centred care</strong><small>Support designed around households</small></div></div>
+<div class="stat"><div class="stat-icon">◎</div><div><strong>Transparent information</strong><small>Understand terms before joining</small></div></div>
+<div class="stat"><div class="stat-icon">↗</div><div><strong>Simple member journey</strong><small>Register interest and get in touch</small></div></div>
+</div>
+</div></section>
+<section id="about"><div class="wrap"><div class="section-head"><div class="kicker">Who we are</div><h2>Care, dignity, and community — at the heart of everything.</h2><p>Our proposed mission is to help people plan ahead and find support through a trusted, well-organised community network.</p></div>
+<div class="cards">
+<div class="card"><div class="card-icon">🤝</div><h3>Mutual support</h3><p>Build a community where members understand how support works and how they can help one another.</p></div>
+<div class="card"><div class="card-icon">🏡</div><h3>Family focused</h3><p>Make space for individuals, couples, families, and dependants in the membership process.</p></div>
+<div class="card"><div class="card-icon">🔎</div><h3>Clarity and trust</h3><p>Publish eligibility, contributions, benefit limits, waiting periods, and claim procedures before collecting payments.</p></div>
+</div></div></section>
+<section id="support" class="soft"><div class="wrap"><div class="section-head"><div class="kicker">Our support approach</div><h2>Designed to help people feel prepared.</h2><p>These are proposed service areas. Final benefits must be approved and legally reviewed before launch.</p></div>
+<div class="cards">
+<div class="card"><div class="card-icon">🕊️</div><h3>Bereavement guidance</h3><p>Clear information and compassionate coordination for families experiencing loss.</p></div>
+<div class="card"><div class="card-icon">👨‍👩‍👧‍👦</div><h3>Family membership</h3><p>A structured way to register members and eligible dependants under defined rules.</p></div>
+<div class="card"><div class="card-icon">📋</div><h3>Member information</h3><p>Accessible records of membership status, approved contributions, and published policies.</p></div>
+</div></div></section>
+<section id="how"><div class="wrap"><div class="section-head"><div class="kicker">How it works</div><h2>Simple steps. Clear expectations.</h2><p>Join only after you have reviewed the final membership terms and understand the available benefits.</p></div>
+<div class="steps"><div class="step"><div class="num">STEP 01</div><h3>Register your interest</h3><p>Choose member or affiliate and provide your contact details.</p></div><div class="step"><div class="num">STEP 02</div><h3>Review the terms</h3><p>Read the eligibility criteria, fees, contribution rules, and benefit conditions.</p></div><div class="step"><div class="num">STEP 03</div><h3>Receive confirmation</h3><p>The authorised team contacts you to explain the next steps and verify details.</p></div></div>
+</div></section>
+<section id="register" class="soft"><div class="wrap"><div class="section-head"><div class="kicker">Join Jali Kenya</div><h2>Start with a simple registration of interest.</h2><p>Use this demo form to see the intended registration experience.</p></div>
+<div class="forms-layout"><aside class="form-intro"><h3>Let's get to know you.</h3><p>Choose the registration path that fits you. A team member can follow up with approved membership information.</p><ul><li>Individual member</li><li>Family member / dependant contact</li><li>Affiliate or community partner</li><li>Follow-up by phone or email</li></ul><p class="footer-small">Please do not submit ID numbers, medical details, or payment information in this demo.</p></aside>
+<div class="form-panel"><div class="tabs"><button type="button" class="tab active" data-kind="member">Member</button><button type="button" class="tab" data-kind="affiliate">Affiliate</button></div>
+<form id="interestForm">
+<input type="hidden" name="registration_type" id="registration_type" value="Member">
+<div class="form-grid"><div class="field"><label for="full_name">Full name *</label><input id="full_name" name="full_name" required autocomplete="name" placeholder="Your full name"></div><div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required type="tel" autocomplete="tel" placeholder="+254 7XX XXX XXX"></div></div>
+<div class="form-grid"><div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="county">County *</label><select id="county" name="county" required><option value="">Select county</option><option>Nairobi</option><option>Kiambu</option><option>Mombasa</option><option>Nakuru</option><option>Kisumu</option><option>Machakos</option><option>Uasin Gishu</option><option>Other county</option></select></div></div>
+<div class="field"><label for="interest">What would you like to know? *</label><select id="interest" name="interest" required><option value="">Choose one</option><option>Individual membership</option><option>Family membership</option><option>Affiliate / partnership</option><option>Contribution and benefit rules</option><option>General information</option></select></div>
+<div class="field"><label for="message">Message (optional)</label><textarea id="message" name="message" placeholder="Tell us how we can help"></textarea></div>
+<label class="form-note"><input type="checkbox" required> I agree to be contacted about this enquiry and understand this demo does not create an active membership.</label>
+<div class="notice">Demo only: this form does not send or save your information. A secure backend and privacy notice must be connected before publishing.</div>
+<button class="btn" type="submit">Preview registration <span>→</span></button><p id="formResult" class="form-note" role="status" aria-live="polite"></p>
+</form></div></div></div></section>
+<section><div class="wrap"><div class="cta"><div><h2>Every family deserves care.</h2><p>Help shape a community built on compassion and clear commitments.</p></div><a class="btn" href="#register">Register your interest →</a></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><div><div class="footer-brand">JALI KENYA</div><div class="footer-small">Together in care. Stronger as family.</div></div><div class="footer-small">Proposed brand and demo website. Not a government website or an active benefits provider.</div><div class="footer-small">© <span id="year"></span> Jali Kenya — concept preview</div></div></footer>
+<script>
+const tabs=document.querySelectorAll('.tab');
+tabs.forEach(tab=>tab.addEventListener('click',()=>{tabs.forEach(t=>t.classList.remove('active'));tab.classList.add('active');document.getElementById('registration_type').value=tab.dataset.kind==='member'?'Member':'Affiliate';}));
+document.getElementById('interestForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);document.getElementById('formResult').textContent='Preview ready for '+d.get('registration_type')+'. Nothing has been sent or stored. Connect a secure server to receive real registrations.';});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
